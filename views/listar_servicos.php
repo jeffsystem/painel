@@ -15,13 +15,13 @@ require_once('../sidebar.php');
 	<section class="content">
 		<div class="row">
 			<div class="col-md-3 col-sm-6 col-xs-12">
-				Conteudo PAGINA 2
+				Lista todos os serviços com DataTable
 			</div>
 		</div>
 	</section>
 </div>
 
 <?php
-require_once ('footer.php'); 
+require_once (localView().'footer.php'); 
 
 ?>

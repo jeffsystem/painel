@@ -1,4 +1,5 @@
 <?php
+
 function url() {
 
 	$request = $_SERVER['REQUEST_SCHEME'].'://';

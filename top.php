@@ -7,6 +7,7 @@
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 require_once('controller/functions.php');
+require_once('controller/database.php');
 
 ?>
 <!DOCTYPE html>

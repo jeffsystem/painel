@@ -25,33 +25,49 @@
       <li>
         <a href="<?php home();?>">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+         <!-- 
           <span class="pull-right-container">
             <small class="label pull-right bg-green">novo</small>
           </span>
+          -->
         </a>
       </li>
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-user"></i>
-          <span>Menu 1</span>
+          <i class="fa fa-calendar"></i>
+          <span>Agenda</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php view();?>pagina1.php"><i class="fa fa-circle-o"></i> Pagina 1</a></li>
+          <li><a href="<?php view();?>agenda.php"><i class="fa fa-circle-o"></i> Horários</a></li>
+          <li><a href="<?php view();?>horarios.php"><i class="fa fa-circle-o"></i> Agenda</a></li>
         </ul>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-user"></i>
-            <span>Menu 2</span>
+            <i class="fa fa-shopping-bag"></i>
+            <span>Serviços</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php view();?>pagina2.php"><i class="fa fa-circle-o"></i> Pagina 2</a></li>
+            <li><a href="<?php view();?>adicionar_servicos.php"><i class="fa fa-circle-o"></i> Adicionar</a></li>
+            <li><a href="<?php view();?>listar_servicos.php"><i class="fa fa-circle-o"></i> Listar</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-cog"></i>
+            <span>Configurações</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php view();?>config.php"><i class="fa fa-circle-o"></i> Empresa</a></li>
           </ul>
         </li>
       </li>
