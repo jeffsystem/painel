@@ -22,6 +22,7 @@ require_once('sidebar.php');
 </div>
 
 <?php
-require_once ('footer.php'); 
+
+require_once (localView().'footer.php'); 
 
 ?>

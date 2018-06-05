@@ -3,40 +3,40 @@ function url() {
 
 	$request = $_SERVER['REQUEST_SCHEME'].'://';
 	$server = $_SERVER['SERVER_NAME'].'/';
-	$xdir = explode('/',__DIR__);
+	$panel = explode('/',$_SERVER['REQUEST_URI']);
+	$painel = $panel[1];
 
-	var_dump(__DIR__);
-	exit();
+	echo $request.$server.$painel.'/';
 
-	$dir = $xdir[4].'/';
-
-	echo $request.$server.$dir;
-
-	return $dir;
+	//return $request.$server;
 }
 
 function home() {
 
 	$request = $_SERVER['REQUEST_SCHEME'].'://';
 	$server = $_SERVER['SERVER_NAME'].'/';
-	$xdir = explode('/',__DIR__);
-	$dir = $xdir[4].'/';
+	$panel = explode('/',$_SERVER['REQUEST_URI']);
+	$painel = $panel[1];
 
-	echo $request.$server.$dir;
-
-	return $home;
+	echo $request.$server.$painel.'/';
 }
 
 function view() {
-
+	
 	$request = $_SERVER['REQUEST_SCHEME'].'://';
 	$server = $_SERVER['SERVER_NAME'].'/';
-	$xdir = explode('/',__DIR__);
-	$dir = $xdir[4].'/';
-	$views = 'views'.'/';
+	$panel = explode('/',$_SERVER['REQUEST_URI']);
+	$painel = $panel[1];
 
-	echo $request.$server.$dir.$views;
+	echo $request.$server.$painel.'/views/';
 
+	return $request.$server.$painel.'/views/';
 
-	return $view;
+}
+
+function localView(){
+
+	$painel =$_SERVER["DOCUMENT_ROOT"].'/painel/';
+
+	return $painel;
 }
