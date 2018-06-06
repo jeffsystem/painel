@@ -15,7 +15,7 @@ require_once('../sidebar.php');
 	<section class="content">
 		<div class="row">
 			<div class="col-md-3 col-sm-6 col-xs-12">
-				Conteudo PAGINA 1
+				Aqui será a agenda aonde o dono irá colocar os dias disponíveis
 			</div>
 		</div>
 	</section>

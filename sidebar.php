@@ -41,8 +41,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php view();?>agenda.php"><i class="fa fa-circle-o"></i> Horários</a></li>
-          <li><a href="<?php view();?>horarios.php"><i class="fa fa-circle-o"></i> Agenda</a></li>
+          <li><a href="<?php view();?>horarios.php"><i class="fa fa-circle-o"></i> Horários</a></li>
+          <li><a href="<?php view();?>agenda.php"><i class="fa fa-circle-o"></i> Agenda</a></li>
         </ul>
 
         <li class="treeview">

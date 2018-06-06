@@ -14,8 +14,25 @@ require_once('../sidebar.php');
 <div class="content-wrapper">
 	<section class="content">
 		<div class="row">
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				Lista todos os serviços com DataTable
+			<div class="col-md-12 col-sm-6 col-xs-12">
+			<table class="table">
+			<thead>
+			<h4>Serviços Cadastrados</h4>
+				<tr>
+				<th scope="col">Serviço</th>
+				<th scope="col">Preço</th>
+				<th scope="col">Ação</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>Corte simples de cabelo de mulher</td>
+				<td>R$ 25,00</td>
+				<td><button type="button" class="btn btn-danger">Excluir</button>
+				<button type="button" class="btn btn-warning">Editar</button></td>
+				</tr>
+			</tbody>
+		</table>
 			</div>
 		</div>
 	</section>
