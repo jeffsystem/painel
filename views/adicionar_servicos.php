@@ -22,16 +22,37 @@ require_once('../sidebar.php');
 						</div>
 						<div class="box-body">
 
-						<div class="form-group">
-							<label for="exampleInputName">Nome do serviço</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="serviço">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputName">Nome do serviço</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Serviço">
+							</div>
 						</div>
 
-						<div class="form-group">
-							<label for="exampleInputName">Valor</label>
-							<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Preço">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputName">Valor</label>
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="R$ 00,00">
+							</div>
 						</div>
 
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputFile">Imagem do serviço</label>
+								<input type="file" class="form-control" id="exampleInputFile">
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputFile">Descrição</label>
+								<textarea class="form-control" rows="2"></textarea>
+							</div>
+						</div>
+
+						
+
+					</div>
 					<div class="box-footer">
 						<button type="submit" class="btn btn-success pull-right">Cadastrar</button>
 					</div>

@@ -134,7 +134,7 @@ require_once('../sidebar.php');
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="exampleInputFile">Sua Logo</label>
-								<input type="file" class="btn btn-default" id="exampleInputFile">
+								<input type="file" class="form-control" id="exampleInputFile">
 							</div>
 						</div>
 
