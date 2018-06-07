@@ -18,7 +18,7 @@ require_once('../sidebar.php');
 			<div class="col-md-6 col-sm-6 col-xs-12">
 					<div class="box box-primary">
 						<div class="box-header with-border">
-							<h3 class="box-title">Adicionar Serviços</h3>
+							<h3 class="box-title">Cadastrar Serviços</h3>
 						</div>
 						<div class="box-body">
 
@@ -50,7 +50,6 @@ require_once('../sidebar.php');
 							</div>
 						</div>
 
-						
 
 					</div>
 					<div class="box-footer">
@@ -59,6 +58,7 @@ require_once('../sidebar.php');
 				</div>
 			</div>
 		</div>
+		
 	</section>
 </div>
 

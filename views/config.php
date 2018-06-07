@@ -25,14 +25,14 @@ require_once('../sidebar.php');
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="exampleInputName">CNPJ</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="00.000.000/0001-00">
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="00.000.000/0001-00">
 							</div>
 						</div>
 
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="exampleInputName">Nome da empresa</label>
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nome fantasia">
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nome fantasia">
 							</div>
 						</div>
 
@@ -60,7 +60,7 @@ require_once('../sidebar.php');
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="exampleInputName">Rua</label>
-								<input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Rua">
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Rua">
 							</div>
 						</div>
 
@@ -74,14 +74,14 @@ require_once('../sidebar.php');
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="exampleInputName">Bairro</label>
-								<input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Bairro">
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Bairro">
 							</div>
 						</div>
 						
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="exampleInputName">Cidade</label>
-								<input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Cidade">
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cidade">
 							</div>
 						</div>
 
@@ -109,14 +109,14 @@ require_once('../sidebar.php');
 						<div class="col-md-3">
 							<div class="form-group">
 								<label for="exampleInputName">Horário de almoço (fim)</label>
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="13:00">
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="13:00">
 							</div>
 						</div>
 
 						<div class="col-md-3">
 							<div class="form-group">
 								<label for="exampleInputName">Horario de saída</label>
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="18:00">
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="18:00">
 							</div>
 						</div>
 

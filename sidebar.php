@@ -54,7 +54,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php view();?>adicionar_servicos.php"><i class="fa fa-circle-o"></i> Adicionar</a></li>
+            <li><a href="<?php view();?>adicionar_servicos.php"><i class="fa fa-circle-o"></i> Cadastrar</a></li>
             <li><a href="<?php view();?>listar_servicos.php"><i class="fa fa-circle-o"></i> Listar</a></li>
           </ul>
         </li>
@@ -68,6 +68,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php view();?>config.php"><i class="fa fa-circle-o"></i> Empresa</a></li>
+            <li><a href="<?php view();?>funcionarios.php"><i class="fa fa-circle-o"></i> Funcionários</a></li>
           </ul>
         </li>
       </li>

@@ -18,22 +18,24 @@ require_once('../sidebar.php');
 			<div class="col-md-6 col-sm-6 col-xs-12">
 					<div class="box box-primary">
 						<div class="box-header with-border">
-							<h3 class="box-title">Horários</h3>
+							<h3 class="box-title">Cadastrar funcionários</h3>
 						</div>
 						<div class="box-body">
 
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="">Horário do profissional</label>
-								<input type="text" class="form-control" id="" placeholder="12:30">
+								<label for="exampleInputName">Nome do Funcionário</label>
+								<input type="text" class="form-control" id="exampleInputText" placeholder="Nome">
 							</div>
 						</div>
-						<div class="col-md-6">
-						<label for="">Nome do profissional</label>
-							<select id="options_funcionarios" class="form-control form-control-sm">
-								<option value="0">Selecione</option>
-							</select>
+
+                        <div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputFile">Foto do Funcionário</label>
+								<input type="file" class="form-control" id="exampleInputFile">
+							</div>
 						</div>
+
 					</div>
 					<div class="box-footer">
 						<button type="submit" class="btn btn-success pull-right">Cadastrar</button>
@@ -42,24 +44,29 @@ require_once('../sidebar.php');
 			</div>
 		</div>
 	</section>
-	<div class="col-md-12 col-sm-12 col-xs-12">
-			<div class="box box-primary">
-				<div class="box-header with-border">
-					<h3 class="box-title">Horários e profissionais</h3>
-				</div>
-				
-				<div class="box-body">
-				<table id="tabela_lista_horarios" class="table table-striped" cellspacing="0" width="100%">
-						<thead>
-							<tr>
-								<th>Horário</th>
-								<th>Nome</th>
-								<th>Status</th>
-							</tr>
-						</thead>
-					</table>	
+
+    <section class="content">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="box box-primary">
+						<div class="box-header with-border">
+							<h3 class="box-title">Lista de funcionários</h3>
+						</div>
+						<div class="box-body">
+                        <table id="tabela_lista_funcionarios" class="table table-striped" cellspacing="0" width="100%">
+						    <thead>
+							    <tr>
+                                    <th>Nome</th>
+                                    <th>Status</th>
+                                    <th>Ação</th>
+							    </tr>
+						    </thead>
+					    </table>
+					</div>
 				</div>
 			</div>
+		</div>
+	</section>
 </div>
 
 
@@ -67,7 +74,7 @@ require_once('../sidebar.php');
 require_once ('../footer.php'); 
 
 ?>
+
 <script src="https://app.clubeagn.com.br/bower_components/jquery-loading-overlay-master/dist/loadingoverlay.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-<script src="../dist/js/horarios.js"></script>
-<script src="../dist/js/lista_horarios.js"></script>
+<script src="../dist/js/listar_funcionarios.js"></script>

@@ -1,9 +1,9 @@
 
     $(function () {
 
-        $("#tabela_lista_servicos").LoadingOverlay("show");
-              data = 'lista_servico';
-              $('#tabela_lista_servicos').DataTable({
+        $("#tabela_lista_funcionarios").LoadingOverlay("show");
+              data = 'lista_funcionario';
+              $('#tabela_lista_funcionarios').DataTable({
                   "ajax":{
                   "method":"POST",
                   "url":'/Api/request.php?request='+data,
@@ -12,10 +12,10 @@
                   "cache": false,
                   "contentType": "application/json; charset=utf-8",
                     complete: function(retorno){
-                      $("#tabela_lista_servicos").LoadingOverlay("hide",true);
+                      $("#tabela_lista_funcionarios").LoadingOverlay("hide",true);
                     },
                     error: function (data) {
-                      $("#tabela_lista_servicos").LoadingOverlay("hide",true);
+                      $("#tabela_lista_funcionarios").LoadingOverlay("hide",true);
                         $('.dataTables_empty').text('Houve erros (API: lista_servicos)');
                     },
                   },
@@ -24,23 +24,23 @@
                     ],
                     "columnDefs": [
                     {"targets": 0, "render": function (data, type, row) {
-                        return row.servico; }
+                        return row.nome; }
                     },
                     {"targets": 1, "render": function (data, type, row) {
-                        var real = Number(row.valor);
-                        var valor = real.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-                        return valor; }
-                    },
-                    
-                    {"targets": 2, "render": function (data, type, row) {
-                        return row.descricao; }
-                    },
-                    
-                    {"targets": 3, "render": function (data, type, row) {
-                        return row.dt_cadastro; }
+                      
+                      switch(row.status){
+                        case '0':
+                          show_status = "<span class='badge bg-green'>Ativado</span>";
+                        break;
+                        case '1':
+                          show_status = "<span class='badge bg-red'>Desativado</span>";
+                        break;
+                        
+                      }
+                        return show_status; }
                     },
 
-                    {"targets": 4, "render": function (data, type, row) {
+                    {"targets": 2, "render": function (data, type, row) {
                         var botao = "<div class='btn-group'>\
                         <button type='button' class='btn btn-default btn-sm'>Ação</button>\
                         <button type='button' class='btn btn-default btn-sm dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>\
@@ -48,7 +48,7 @@
                           <span class='sr-only'>Toggle Dropdown</span>\
                         </button>\
                         <ul class='dropdown-menu'>\
-                          <li><a href='#'><i class='fa fa-trash'></i> Desativar</a></li>\
+                          <li><a href='#'><i class='fa fa-trash'></i> Deletar</a></li>\
                           <li><a href='#' onclick=alert('"+row.id+"');><i class='fa fa-pencil-square-o'></i> Editar</a></li>\
                         </ul>\
                       </div>"

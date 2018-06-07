@@ -1,9 +1,9 @@
 
     $(function () {
 
-        $("#tabela_lista_servicos").LoadingOverlay("show");
-              data = 'lista_servico';
-              $('#tabela_lista_servicos').DataTable({
+        $("#tabela_lista_horarios").LoadingOverlay("show");
+              data = 'lista_horario';
+              $('#tabela_lista_horarios').DataTable({
                   "ajax":{
                   "method":"POST",
                   "url":'/Api/request.php?request='+data,
@@ -12,10 +12,10 @@
                   "cache": false,
                   "contentType": "application/json; charset=utf-8",
                     complete: function(retorno){
-                      $("#tabela_lista_servicos").LoadingOverlay("hide",true);
+                      $("#tabela_lista_horarios").LoadingOverlay("hide",true);
                     },
                     error: function (data) {
-                      $("#tabela_lista_servicos").LoadingOverlay("hide",true);
+                      $("#tabela_lista_horarios").LoadingOverlay("hide",true);
                         $('.dataTables_empty').text('Houve erros (API: lista_servicos)');
                     },
                   },
@@ -24,36 +24,24 @@
                     ],
                     "columnDefs": [
                     {"targets": 0, "render": function (data, type, row) {
-                        return row.servico; }
+                        return row.horario; }
                     },
                     {"targets": 1, "render": function (data, type, row) {
-                        var real = Number(row.valor);
-                        var valor = real.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-                        return valor; }
+                        return row.nome_funcionario; }
                     },
-                    
                     {"targets": 2, "render": function (data, type, row) {
-                        return row.descricao; }
-                    },
-                    
-                    {"targets": 3, "render": function (data, type, row) {
-                        return row.dt_cadastro; }
-                    },
-
-                    {"targets": 4, "render": function (data, type, row) {
-                        var botao = "<div class='btn-group'>\
-                        <button type='button' class='btn btn-default btn-sm'>Ação</button>\
-                        <button type='button' class='btn btn-default btn-sm dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>\
-                          <span class='caret'></span>\
-                          <span class='sr-only'>Toggle Dropdown</span>\
-                        </button>\
-                        <ul class='dropdown-menu'>\
-                          <li><a href='#'><i class='fa fa-trash'></i> Desativar</a></li>\
-                          <li><a href='#' onclick=alert('"+row.id+"');><i class='fa fa-pencil-square-o'></i> Editar</a></li>\
-                        </ul>\
-                      </div>"
-                        return botao; }
-                    },
+                        console.log(row.nome_funcionario)
+                        switch(row.status_horario){
+                          case '0':
+                            show_status = "<span class='badge bg-green'>Disponível</span>";
+                          break;
+                          case '1':
+                            show_status = "<span class='badge bg-red'>Agendado</span>";
+                          break;
+                          
+                        }
+                          return show_status; }
+                      },
         
                     ],
                     'language': {
