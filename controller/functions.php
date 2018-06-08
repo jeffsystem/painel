@@ -1,5 +1,20 @@
 <?php
 
+session_start();
+
+$teste = $_SESSION['teste'];
+
+	if($teste == 'logado'){
+
+		var_dump($teste);
+		//header("location:/painel/index.php");
+
+	}else{
+		header("location:/login/index.php");
+
+		session_destroy();
+	}
+
 function url() {
 
 	$request = $_SERVER['REQUEST_SCHEME'].'://';
@@ -8,8 +23,6 @@ function url() {
 	$painel = $panel[1];
 
 	echo $request.$server.$painel.'/';
-
-	//return $request.$server;
 }
 
 function home() {
@@ -30,14 +43,10 @@ function view() {
 	$painel = $panel[1];
 
 	echo $request.$server.$painel.'/views/';
-
 	return $request.$server.$painel.'/views/';
-
 }
 
 function localView(){
-
 	$painel =$_SERVER["DOCUMENT_ROOT"].'/painel/';
-
 	return $painel;
 }

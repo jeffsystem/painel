@@ -6,5 +6,13 @@
 //    GitHub: github.com/jhowbhz/CMSLite    //
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+    session_start();
+
+    $_SESSION['teste'] = 'logout';
+
+    header("location:/painel/index.php");
+
+    session_destroy();
+
 echo "Saiu.";
 ?>

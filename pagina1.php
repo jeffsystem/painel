@@ -9,6 +9,7 @@
 require_once('top.php'); 
 require_once('header.php'); 
 require_once('sidebar.php');
+
 ?>
 
 <div class="content-wrapper">

@@ -27,7 +27,6 @@
                         return row.nome; }
                     },
                     {"targets": 1, "render": function (data, type, row) {
-                      
                       switch(row.status){
                         case '0':
                           show_status = "<span class='badge bg-green'>Ativado</span>";

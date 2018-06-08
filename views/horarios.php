@@ -15,28 +15,36 @@ require_once('../sidebar.php');
 <div class="content-wrapper">
 	<section class="content">
 		<div class="row">
-			<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="col-md-12 col-sm-6 col-xs-12">
 					<div class="box box-primary">
 						<div class="box-header with-border">
 							<h3 class="box-title">Horários</h3>
 						</div>
 						<div class="box-body">
 
-						<div class="col-md-6">
+						<div class="col-md-4">
 							<div class="form-group">
-								<label for="">Horário do profissional</label>
-								<input type="text" class="form-control" id="" placeholder="12:30">
+								<label for="horario">Horário do profissional</label>
+								<input type="text" class="form-control add_hora" id="horario" placeholder="12:30">
 							</div>
 						</div>
-						<div class="col-md-6">
-						<label for="">Nome do profissional</label>
+
+						<div class="col-md-4">
+							<label for="">Serviço desejado</label>
+							<select id="options_servicos" class="form-control form-control-sm">
+								<option value="0">Selecione</option>
+							</select>
+						</div>
+						
+						<div class="col-md-4">
+							<label for="">Nome do profissional</label>
 							<select id="options_funcionarios" class="form-control form-control-sm">
 								<option value="0">Selecione</option>
 							</select>
 						</div>
 					</div>
 					<div class="box-footer">
-						<button type="submit" class="btn btn-success pull-right">Cadastrar</button>
+						<button type="button" class="btn btn-success pull-right btn_add_horario">Cadastrar</button>
 					</div>
 				</div>
 			</div>
@@ -62,12 +70,26 @@ require_once('../sidebar.php');
 			</div>
 </div>
 
-
 <?php
-require_once ('../footer.php'); 
+
+	require_once ('../footer.php'); 
 
 ?>
+
 <script src="https://app.clubeagn.com.br/bower_components/jquery-loading-overlay-master/dist/loadingoverlay.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+<script src="<?php url(); ?>components-extras/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
+
 <script src="../dist/js/horarios.js"></script>
+<script src="../dist/js/add_horarios.js"></script>
 <script src="../dist/js/lista_horarios.js"></script>
+
+<div id="modal_generico" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body body_erro">
+      </div>
+    </div>
+  </div>
+</div>

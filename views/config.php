@@ -138,8 +138,6 @@ require_once('../sidebar.php');
 							</div>
 						</div>
 
-						
-
 					<div class="box-footer">
 						<button type="submit" class="btn btn-success pull-right">Cadastrar</button>
 					</div>
